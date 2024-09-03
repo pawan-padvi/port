@@ -1,0 +1,9 @@
+/* Ensure the content area is below the fixed header */
+body {
+    margin-top: 56px; /* Adjust based on navbar height */
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  

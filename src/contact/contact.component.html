@@ -1,0 +1,31 @@
+<table class="table table-striped table-hover table-bordered table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Website</th>
+        <th>Company</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td title="{{ user.id }}">{{ user.id }}</td>
+        <td title="{{ user.name }}">{{ user.name }}</td>
+        <td title="{{ user.username }}">{{ user.username }}</td>
+        <td title="{{ user.email }}">{{ user.email }}</td>
+        <td title="{{ user.address.street }},{{ user.address.suite }},{{ user.address.city }},{{ user.address.zipcode }}">
+           {{ user.address.street }},
+           {{ user.address.suite }}
+        </td>
+        <td title="{{user.phone}}">{{ user.phone.slice(0,10) }}</td>
+        <td title="{{ user.website }}"><a [href]="user.website" target="_blank">{{ user.website }}</a></td>
+        <td title="{{user.company.name}} {{ user.company.catchPhrase }} {{ user.company.bs }}">
+          {{ user.company.name }}
+        </td>
+      </tr>
+    </tbody>
+  </table>

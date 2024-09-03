@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+/* Ensure proper padding and margin adjustments */
+@media (max-width: 767.98px) {
+    .sidebar {
+      display: none; /* Hide sidebar on smaller screens if needed */
+    }
+  }
+  
